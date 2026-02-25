@@ -18,7 +18,7 @@ def load_prediction_model():
     if not os.path.exists(model_path):
         st.error(f"Model file not found at: {model_path}")
         st.stop()
-    return load_model(model_path)
+    return load_model(model_path, compile=False)
 
 model = load_prediction_model()
 class_labels = ['glioma', 'meningioma', 'notumor', 'pituitary']
