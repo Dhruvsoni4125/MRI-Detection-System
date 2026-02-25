@@ -14,7 +14,7 @@ from tensorflow.keras.applications.vgg16 import preprocess_input
 @st.cache_resource
 def load_prediction_model():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.path.join(base_dir, 'models', 'mri_model_trained.keras')
+    model_path = os.path.join(base_dir, 'models', 'mri_model.h5')
     if not os.path.exists(model_path):
         st.error(f"Model file not found at: {model_path}")
         st.stop()
